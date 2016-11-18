@@ -1,4 +1,5 @@
-<<<<<<< Original<<<<<<< Original<?xml version="1.0" encoding="utf-8"?><manifest
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
 xmlns:android="http://schemas.android.com/apk/res/android"
 package="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv">
 
@@ -15,18 +16,18 @@ package="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv">
         android:theme="@style/AppTheme.NoActionBar"></activity>
 </application>
 
-</manifest>=======<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+</manifest><manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 <application>
     <activity
         android:name="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.PilihUnivActivity"></activity>
 </application>
-</manifest>>>>>>>> Added
+</manifest>
 
-    =======<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 <application>
     <activity
         android:name="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.pilihuniv"></activity>
 </application>
-</manifest>>>>>>>> Added
+</manifest>

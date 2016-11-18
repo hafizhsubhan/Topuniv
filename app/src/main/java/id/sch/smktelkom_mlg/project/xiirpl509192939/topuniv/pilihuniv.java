@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.R;
 import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.model.Univ;
 
 public class pilihuniv extends RecyclerView.Adapter<pilihuniv.ViewHolder> {
@@ -50,6 +49,7 @@ public class pilihuniv extends RecyclerView.Adapter<pilihuniv.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
+
             ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
             tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
             tvDeskripsi = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
