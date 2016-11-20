@@ -12,22 +12,13 @@ package="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".home" android:label="@string/title_activity_home"
-        android:theme="@style/AppTheme.NoActionBar"></activity>
+    <application>
+        <activity android:name="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.PilihUnivActivity"></activity>
+    </application>
 </application>
 
-</manifest><manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-<application>
-    <activity
-        android:name="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.PilihUnivActivity"></activity>
-</application>
 </manifest>
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-<application>
-    <activity
-        android:name="id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.pilihuniv"></activity>
-</application>
-</manifest>
+
+
