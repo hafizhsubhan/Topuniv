@@ -69,9 +69,9 @@ public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            ivFoto = (ImageView) itemView.findViewById(R.id.imageProv);
-            tvJudul = (TextView) itemView.findViewById(R.id.provName);
-            tvDeskripsi = (TextView) itemView.findViewById(R.id.provDesc);
+            ivFoto = (ImageView) itemView.findViewById(R.id.imageuniversitas);
+            tvJudul = (TextView) itemView.findViewById(R.id.universitasName);
+            tvDeskripsi = (TextView) itemView.findViewById(R.id.universitasDesc);
             bMore = (Button) itemView.findViewById(R.id.readMore);
 
             itemView.setOnClickListener(new View.OnClickListener() {

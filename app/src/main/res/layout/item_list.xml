@@ -23,7 +23,7 @@
             app:srcCompat="@drawable/itb" />
 
         <TextView
-            android:id="@+id/provName"
+            android:id="@+id/universitasName"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_alignBottom="@id/imageuniversitas"
@@ -33,7 +33,7 @@
             tools:text="ProvName" />
 
         <TextView
-            android:id="@+id/provDesc"
+            android:id="@+id/universitasDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageuniversitas"

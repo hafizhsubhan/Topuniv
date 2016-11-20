@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void fillData() {
         Resources resource = getResources();
-        String[] arJudul = resource.getStringArray(R.array.prov);
-        String[] arDeskripsi = resource.getStringArray(R.array.prov_desc);
-        TypedArray a = resource.obtainTypedArray(R.array.prov_picture);
+        String[] arJudul = resource.getStringArray(R.array.universitas);
+        String[] arDeskripsi = resource.getStringArray(R.array.universitas_desc);
+        TypedArray a = resource.obtainTypedArray(R.array.universitas_picture);
         Drawable[] arFoto = new Drawable[a.length
                 ()];
         for (int i = 0; i < arFoto.length; i++) {
