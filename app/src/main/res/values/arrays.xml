@@ -49,7 +49,7 @@ Dies Natalis ITS pertama adalah 10 November 1960, sementara nama ITS mulai digun
     <array name="universitas_picture">
         <item>@drawable/itb</item>
         <item>@drawable/its</item>
-        <item>@drawable/tel-u</item>
+        <item>@drawable/telu</item>
         <item>@drawable/ub</item>
         <item>@drawable/ui</item>
         <item>@drawable/umm</item>
