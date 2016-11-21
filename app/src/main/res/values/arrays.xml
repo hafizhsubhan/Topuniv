@@ -49,4 +49,9 @@ Dies Natalis ITS pertama adalah 10 November 1960, sementara nama ITS mulai digun
         <item>Lorem Ipsum dolor sit amet</item>
         <item>Lorem Ipsum dolor sit amet</item>
     </array>
+    <array name="univ">
+        <item>Universitas Indonesia</item>
+        <item>Institute Technology Surabaya</item>
+        <item>Telkom University</item>
+    </array>
 </resources>
