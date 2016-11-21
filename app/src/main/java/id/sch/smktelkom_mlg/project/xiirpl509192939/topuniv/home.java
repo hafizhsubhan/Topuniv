@@ -29,7 +29,7 @@ public class home extends AppCompatActivity implements ProvAdapter.
     ProvAdapter mAdapter;
     ArrayList<Prov> mListAll = new ArrayList<>();
     boolean isFiltered;
-    ArrayList<Integer> mListMapFiltered = new ArrayList<>();
+    ArrayList<Integer> mListMapFilter = new ArrayList<>();
     String mQuery;
 
     @Override
@@ -81,8 +81,8 @@ public class home extends AppCompatActivity implements ProvAdapter.
     @Override
     public void doClick(int pos) {
         Intent intent = new Intent(this, pilihuniv.class);
-        intent.putExtra(PROV, mList.get(pos));
-        intent.putExtra(UNIV, pos);
         startActivity(intent);
     }
+
+
 }
