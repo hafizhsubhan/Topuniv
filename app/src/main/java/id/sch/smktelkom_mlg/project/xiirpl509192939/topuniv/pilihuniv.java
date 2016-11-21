@@ -1,58 +1,68 @@
 package id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv;
 
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.adapter.UnivAdapter;
+import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.model.Prov;
 import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.model.Univ;
 
-public class pilihuniv extends RecyclerView.Adapter<pilihuniv.ViewHolder> {
+public class pilihuniv extends AppCompatActivity {
 
-
-    ArrayList<Univ> univList;
-
-    public pilihuniv(ArrayList<Univ> hotelList) {
-        this.univList = hotelList;
-    }
+    ArrayList<Univ> mList = new ArrayList<>();
+    UnivAdapter mAdapter;
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.pilihuniv, parent, false);
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pilihuniv);
+
+        Prov prov = (Prov) getIntent().getSerializableExtra(home.PROV);
+        setTitle(prov.judul);
+
+        ImageView ivFoto = (ImageView) findViewById(R.id.univ_pict);
+        ivFoto.setImageURI(Uri.parse(prov.foto));
+        TextView tvDeskripsi = (TextView) findViewById(R.id.univ_desc);
+        tvDeskripsi.setText(prov.deskripsi);
+
+        /*RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        mAdapter = new UnivAdapter(mList);
+        recyclerView.setAdapter(mAdapter);
+
+        fillData();*/
     }
 
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Univ univ = univList.get(position);
-        holder.tvJudul.setText(univ.judul);
-        holder.tvDeskripsi.setText(univ.deskripsi);
-        holder.ivFoto.setImageDrawable(univ.foto);
-    }
+    private void fillData() {
+        Resources resource = getResources();
+        String[] arJudul = resource.getStringArray(R.array.universitas);
+        String[] arDeskripsi = resource.getStringArray(R.array.universitas_desc);
+        TypedArray a = resource.obtainTypedArray(R.array.universitas_picture);
+        Drawable[] arFoto = new Drawable[a.length
+                ()];
+        for (int i = 0; i < arFoto.length; i++) {
+            BitmapDrawable bd = (BitmapDrawable) a.getDrawable(i);
+            RoundedBitmapDrawable rbd =
+                    RoundedBitmapDrawableFactory.create(getResources(), bd.getBitmap());
+            rbd.setCircular(true);
+            arFoto[i] = rbd;
+        }
+        a.recycle();
 
-    @Override
-    public int getItemCount() {
-        if (univList != null)
-            return univList.size();
-        return 0;
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivFoto;
-        TextView tvJudul;
-        TextView tvDeskripsi;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
-            tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
-            tvDeskripsi = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
+        for (int i = 0; i < arJudul.length; i++) {
+            mList.add(new Univ(arJudul[i], arDeskripsi[i], arFoto[i]));
         }
     }
 }

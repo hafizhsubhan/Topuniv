@@ -17,18 +17,12 @@
     <string-array name="universitas">
         <item>ITB</item>
         <item>ITS</item>
-        <item>TEL-U</item>
-        <item>UB</item>
         <item>UI</item>
-        <item>UMM</item>
     </string-array>
     <string-array name="universitas_desc">
         <item>Institute Teknologi Bandung</item>
         <item>Institute Teknologi Sepuluh November</item>
-        <item>Telkom University</item>
-        <item>Universitas Brawijaya</item>
         <item>Universitas Indonesia</item>
-        <item>Universitas Muhammadiyah Malang</item>
     </string-array>
     <string-array name="universitas_details">
         <item>Institut Teknologi Bandung (ITB) adalah sebuah perguruan tinggi negeri yang berkedudukan di Kota Bandung. Nama ITB diresmikan pada tanggal 2 Maret 1959. Sejak tanggal 14 Oktober 2013 ITB menjadi Perguruan Tinggi Negeri Badan Hukum (PTN BH) yang memiliki otonomi pengelolaan dalam akademik dan non-akademik.[9] ITB telah memiliki 20 program studi yang terakreditasi secara internasional (sembilan di antaranya dari ABET)
@@ -36,22 +30,23 @@
         <item>Institut Teknologi Sepuluh Nopember (disingkat ITS) adalah perguruan tinggi negeri yang terletak di Surabaya. ITS awalnya didirikan oleh Yayasan Perguruan Tinggi Teknik (YPTT) yang diketuai oleh dr. Angka Nitisastro pada tanggal 10 November 1957.
 Dies Natalis ITS pertama adalah 10 November 1960, sementara nama ITS mulai digunakan dalam Peraturan Pemerintah No. 9 tahun 1961 (ditetapkan tanggal 23 Maret 1961). Dalam visi awal, ITS ditujukan untuk mendidik para pemimpin yang unggul di bidang sains dan teknologi, untuk mengangkat Republik Indonesia menjadi negara berperadaban maju dan tinggi.
         </item>
-        <item>Universitas Telkom, atau disingkat Tel-U adalah sebuah perguruan tinggi swasta di Indonesia. Kampus utama Tel-U terletak di Kabupaten Bandung, Jawa Barat, tepatnya di Jalan Telekomunikasi - Terusan Buahbatu, di kawasan Bandung Technoplex (BT-Plex). Kampus lainnya berlokasi di daerah Gegerkalong Hilir, sebelah utara Kota Bandung, di kompleks perkantoran PT. Telkom (Telkom Innovation and Development Center dan Telkom Corporate University/Telkom Training Center).
-        </item>
-        <item>Universitas Brawijaya (biasa disingkat UNBRA, UNIBRAW atau singkatan resmi UB) merupakan lembaga pendidikan tinggi negeri di Indonesia yang berdiri pada tahun 1963 di Kota Malang melalui Ketetapan Menteri Pendidikan dan Ilmu Pengetahuan No. 1 tanggal 5 Januari 1963, kemudian disahkan oleh Keputusan Presiden no. 196 tahun 1963 yang kemudian tanggal 5 Januari ditetapkan sebagai hari lahir Universitas Brawijaya. Jumlah mahasiswa saat ini lebih dari 55 ribu orang dari berbagai strata mulai program Diploma, program Sarjana, program Magister, dan program Doktor selain program Spesialis tersebar dalam 15 Fakultas dan 2 Program pendidikan setara fakultas.
-        </item>
         <item>Universitas Indonesia, biasa disingkat sebagai UI, adalah sebuah perguruan tinggi di Indonesia. Kampus utamanya terletak di bagian Utara dari Depok, Jawa Barat tepat di perbatasan antara Depok dengan wilayah Jakarta Selatan, dan kampus utama lainnya terdapat di daerah Salemba di Jakarta Pusat. Universitas Indonesia adalah kampus modern, komprehensif, terbuka, multi budaya, dan humanis yang mencakup disiplin ilmu yang luas. Telah menghasilkan lebih dari 400.000 alumni. Secara umum dianggap sebagai salah satu dari tiga perguruan tinggi papan atas di Indonesia bersama dengan Universitas Gadjah Mada dan Institut Teknologi Bandung.
         </item>
-        <item>Universitas Muhammadiyah Malang (UMM) adalah perguruan tinggi swasta terakreditasi "A" dengan Nomor SK: 074/SK/BAN-PT/Ak-IV/PT/II/2013, yang berpusat di kampus III terpadu Universitas Muhammadiyah Malang, Jalan Raya Tlogomas 246 Kota Malang, Jawa Timur. Universitas yang berdiri pada tahun 1964 ini berinduk pada organisasi Muhammadiyah dan merupakan perguruan tinggi Muhammadiyah terbesar di Jawa Timur. UMM termasuk dalam jajaran PTS terkemuka di Indonesia. Oleh karena didominasi warna dinding putih, UMM sering disebut sebagai kampus putih.
-        </item>
-
     </string-array>
     <array name="universitas_picture">
         <item>@drawable/itb</item>
         <item>@drawable/its</item>
-        <item>@drawable/telu</item>
-        <item>@drawable/ub</item>
         <item>@drawable/ui</item>
-        <item>@drawable/umm</item>
+    </array>
+
+    <array name="prov">
+        <item>Jawa Barat</item>
+        <item>Jawa Timur</item>
+        <item>DKI Jakarta</item>
+    </array>
+    <array name="prov_desc">
+        <item>Lorem Ipsum dolor sit amet</item>
+        <item>Lorem Ipsum dolor sit amet</item>
+        <item>Lorem Ipsum dolor sit amet</item>
     </array>
 </resources>

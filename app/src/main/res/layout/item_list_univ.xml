@@ -7,33 +7,33 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/univ_pict"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:scaleType="centerCrop"
         tools:src="@drawable/itb" />
 
     <TextView
-        android:id="@+id/textViewJudul"
+        android:id="@+id/univ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/univ_pict"
+        android:layout_toRightOf="@+id/univ_pict"
         android:ellipsize="end"
         android:maxLines="1"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        tools:text="Judul" />
+        tools:text="Universitas" />
 
     <TextView
-        android:id="@+id/textViewDeskripsi"
+        android:id="@+id/univ_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewJudul"
-        android:layout_alignStart="@+id/textViewJudul"
-        android:layout_below="@+id/textViewJudul"
+        android:layout_alignLeft="@+id/univ"
+        android:layout_alignStart="@+id/univ"
+        android:layout_below="@+id/univ"
         android:ellipsize="end"
         android:maxLines="2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
