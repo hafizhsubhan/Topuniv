@@ -21,7 +21,11 @@
         <activity
             android:name=".pilihuniv"
             android:label="Pilih Universitas" />
-        <activity android:name=".search_univ"></activity>
+        <activity android:name=".search_univ" />
+        <activity
+            android:name=".detail_univ"
+            android:label="@string/title_activity_detail_univ"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,7 @@
 package id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.adapter;
 
+import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +20,12 @@ import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.model.Univ;
 
 public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder> {
     ArrayList<Univ> univList;
+    IUnivAdapter mIUnivAdapter;
 
-    public UnivAdapter(ArrayList<Univ> univList) {
+    public UnivAdapter(Context context, ArrayList<Univ> univList) {
         this.univList = univList;
+        mIUnivAdapter = (IUnivAdapter) context;
     }
-
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -36,7 +39,7 @@ public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder> {
         Univ univ = univList.get(position);
         holder.tvJudul.setText(univ.judul);
         holder.tvDeskripsi.setText(univ.deskripsi);
-        holder.ivFoto.setImageDrawable(univ.foto);
+        holder.ivFoto.setImageURI(Uri.parse(univ.foto));
     }
 
     @Override
@@ -44,6 +47,11 @@ public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder> {
         if (univList != null)
             return univList.size();
         return 0;
+    }
+
+
+    public interface IUnivAdapter {
+        void doClick(int pos);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -58,13 +66,13 @@ public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder> {
             tvJudul = (TextView) itemView.findViewById(R.id.univ);
             tvDeskripsi = (TextView) itemView.findViewById(R.id.univ_desc);
 
-            /*itemView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mIUnivAdapter.doClick(getAdapterPosition());
                 }
             });
-            bEdit.setOnClickListener(new View.OnClickListener() {
+            /*bEdit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mIHotelAdapter.doEdit(getAdapterPosition());

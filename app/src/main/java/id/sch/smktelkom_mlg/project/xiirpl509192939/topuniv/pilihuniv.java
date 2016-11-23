@@ -1,12 +1,10 @@
 package id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv;
 
+import android.content.ContentResolver;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,8 +18,9 @@ import java.util.ArrayList;
 import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.adapter.UnivAdapter;
 import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.model.Univ;
 
-public class pilihuniv extends AppCompatActivity {
+public class pilihuniv extends AppCompatActivity implements UnivAdapter.IUnivAdapter {
 
+    public static final String UNIV = "univ";
     ArrayList<Univ> mList = new ArrayList<>();
     UnivAdapter mAdapter;
     ArrayList<Univ> mListAll = new ArrayList<>();
@@ -45,7 +44,7 @@ public class pilihuniv extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new UnivAdapter(mList);
+        mAdapter = new UnivAdapter(this, mList);
         recyclerView.setAdapter(mAdapter);
 
         fillData();
@@ -66,21 +65,22 @@ public class pilihuniv extends AppCompatActivity {
         Resources resource = getResources();
         String[] arJudul = resource.getStringArray(R.array.universitas);
         String[] arDeskripsi = resource.getStringArray(R.array.universitas_desc);
+        String[] arDetail = resource.getStringArray(R.array.universitas_details);
         TypedArray a = resource.obtainTypedArray(R.array.universitas_picture);
-        Drawable[] arFoto = new Drawable[a.length
-                ()];
+        String[] arFoto = new String[a.length()];
         for (int i = 0; i < arFoto.length; i++) {
-            BitmapDrawable bd = (BitmapDrawable) a.getDrawable(i);
-            RoundedBitmapDrawable rbd =
-                    RoundedBitmapDrawableFactory.create(getResources(), bd.getBitmap());
-            rbd.setCircular(true);
-            arFoto[i] = rbd;
+            int id = a.getResourceId(i, 0);
+            arFoto[i] = ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+                    + resource.getResourcePackageName(id) + '/'
+                    + resource.getResourceTypeName(id) + '/'
+                    + resource.getResourceEntryName(id);
         }
         a.recycle();
 
         for (int i = 0; i < arJudul.length; i++) {
-            mList.add(new Univ(arJudul[i], arDeskripsi[i], arFoto[i]));
+            mList.add(new Univ(arJudul[i], arDeskripsi[i], arDetail[i], arFoto[i]));
         }
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -131,6 +131,13 @@ public class pilihuniv extends AppCompatActivity {
             }
         }
         mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void doClick(int pos) {
+        Intent intent = new Intent(this, detail_univ.class);
+        intent.putExtra(UNIV, mList.get(pos));
+        startActivity(intent);
     }
 }
 
