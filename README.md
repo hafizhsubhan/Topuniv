@@ -11,7 +11,7 @@ Topuniv is an app to provide you to looking for an Indonesian University!<br>
 ![Skrinsut7](7.png)
 
 ###Video
-https://youtu.be/Qu0RJARHs_4
+<iframe  title="YouTube video player" width="480" height="390" src="https://youtu.be/Qu0RJARHs_4" frameborder="0" allowfullscreen></iframe>
 
 ###APK File
 https://drive.google.com/file/d/0Byqfof7jZQ-7XzBpOTJycWxocXc/view?usp=sharing
@@ -19,7 +19,7 @@ https://drive.google.com/file/d/0Byqfof7jZQ-7XzBpOTJycWxocXc/view?usp=sharing
 ###Developed By :<br>
 Name |Class |No |NIS |Username |Schools
 ---- | -----|---|----|---------|-------
-Bagus Dwi Jati Sasongko|XIIRPL5|09|4305/1203-070|Bagus13d|SMKTELKOMMALANG
-Hafizh Subhan Mahdiy|XIIRPL5|19|4352/1250-070|hafizhsubhan|SMKTELKOMMALANG
-Norton Rafli Ahmad Q.Z|XIIRPL5|29|4405/1303-070|Nortonrafli|SMKTELKOMMALANG
-Yoga Priyandani Sulton|XIIRPL5|39|4464/1302-070|yogapriandani|SMKTELKOMMALANG
+Bagus Dwi Jati Sasongko|XIIRPL5|09|4305/1203-070|@Bagus13d|SMKTELKOMMALANG
+Hafizh Subhan Mahdiy|XIIRPL5|19|4352/1250-070|@hafizhsubhan|SMKTELKOMMALANG
+Norton Rafli Ahmad Q.Z|XIIRPL5|29|4405/1303-070|@Nortonrafli|SMKTELKOMMALANG
+Yoga Priyandani Sulton|XIIRPL5|39|4464/1302-070|@yogapriandani|SMKTELKOMMALANG
