@@ -11,12 +11,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.adapter.ProvAdapter;
 import id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv.model.Prov;
+
 
 public class home extends AppCompatActivity implements ProvAdapter.
         IProvAdapter {
@@ -57,6 +61,7 @@ public class home extends AppCompatActivity implements ProvAdapter.
         });
     }
 
+
     private void fillData() {
         Resources resource = getResources();
         String[] arJudul = resource.getStringArray(R.array.prov);
@@ -82,6 +87,24 @@ public class home extends AppCompatActivity implements ProvAdapter.
     public void doClick(int pos) {
         Intent intent = new Intent(this, pilihuniv.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_about:
+                Intent intent = new Intent(this, about.class);
+                startActivity(intent);
+                return true;
+        }
+        return false;
     }
 
 

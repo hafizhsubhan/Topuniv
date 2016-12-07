@@ -28,18 +28,10 @@ public class pilihuniv extends AppCompatActivity implements UnivAdapter.IUnivAda
     ArrayList<Integer> mListMapFilter = new ArrayList<>();
     String mQuery;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pilihuniv);
-
-        /*Prov prov = (Prov) getIntent().getSerializableExtra(home.PROV);
-
-        ImageView ivFoto = (ImageView) findViewById(R.id.univ_pict);
-        ivFoto.setImageURI(Uri.parse(prov.foto));
-        TextView tvDeskripsi = (TextView) findViewById(R.id.univ_desc);
-        tvDeskripsi.setText(prov.deskripsi);*/
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -63,9 +55,9 @@ public class pilihuniv extends AppCompatActivity implements UnivAdapter.IUnivAda
 
     private void fillData() {
         Resources resource = getResources();
-        String[] arJudul = resource.getStringArray(R.array.universitas);
-        String[] arDeskripsi = resource.getStringArray(R.array.universitas_desc);
-        String[] arDetail = resource.getStringArray(R.array.universitas_details);
+        String[] arJudul = resource.getStringArray(R.array.univ);
+        String[] arDeskripsi = resource.getStringArray(R.array.prov_desc);
+        String[] arDetail = resource.getStringArray(R.array.prov_desc);
         TypedArray a = resource.obtainTypedArray(R.array.universitas_picture);
         String[] arFoto = new String[a.length()];
         for (int i = 0; i < arFoto.length; i++) {

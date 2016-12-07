@@ -76,6 +76,14 @@ public class ProvAdapter extends RecyclerView.Adapter<ProvAdapter.ViewHolder> {
             tvDeskripsi = (TextView) itemView.findViewById(R.id.prov_desc);
             bMore = (Button) itemView.findViewById(R.id.readMore);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    mIProvAdapter.doClick(pos);
+                }
+            });
+
             bMore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

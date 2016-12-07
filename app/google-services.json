@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "437119184059",
+    "firebase_url": "https://topuniv-1208e.firebaseio.com",
+    "project_id": "topuniv-1208e",
+    "storage_bucket": "topuniv-1208e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437119184059:android:df4c6ce711f34572",
+        "android_client_info": {
+          "package_name": "id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437119184059-63qkfjj3m0m4cinc2061bnba3n8lc9o6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sch.smktelkom_mlg.project.xiirpl509192939.topuniv",
+            "certificate_hash": "9994A7CC6595219EABC55BCC1FA0587827012E82"
+          }
+        },
+        {
+          "client_id": "437119184059-fkovqq10v79fjjj74l3eoj5iinoqavta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaR4DNBhoe7Fip8nJtgCEgmAw2ibephSY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437119184059-fkovqq10v79fjjj74l3eoj5iinoqavta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
