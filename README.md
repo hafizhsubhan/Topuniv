@@ -11,7 +11,7 @@ Topuniv is an app to provide you to looking for an Indonesian University!<br>
 ![Skrinsut7](7.png)
 
 ###Video
-<iframe  title="YouTube video player" width="480" height="390" src="https://youtu.be/Qu0RJARHs_4" frameborder="0" allowfullscreen></iframe>
+https://youtu.be/Qu0RJARHs_4
 
 ###APK File
 https://drive.google.com/file/d/0Byqfof7jZQ-7XzBpOTJycWxocXc/view?usp=sharing
